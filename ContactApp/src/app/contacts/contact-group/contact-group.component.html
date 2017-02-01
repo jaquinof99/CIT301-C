@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-xs-12">
+    <ca-contact-group-add  [selectedContact]="selectedContact"></ca-contact-group-add> <!-- Passing variable to another component-->
+    <hr>
+    <ul  class="list-group">
+      <ca-contact-item *ngFor="let contact of contactGroup" [contact]="contact"></ca-contact-item>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="col-xs-5" style="border-style: solid; border-color: silver;">
+    <ca-contact-list (selectedContact)="selectedContact = $event"></ca-contact-list>
+  </div>
+  <div class="col-xs-1"></div>
+  <div class="col-xs-6" style="border-style: solid; border-color: silver;" *ngIf="selectedContact">
+    <ca-contact-detail [selectedContact]="selectedContact" *ngIf="selectedContact.group==null"></ca-contact-detail>
+
+    <ca-contact-group [selectedContact]="selectedContact" *ngIf="selectedContact.group!=null"></ca-contact-group>
+  </div>
+
+</div>
+
