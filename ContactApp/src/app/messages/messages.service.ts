@@ -3,7 +3,7 @@ import { Message} from './message';
 import { MOCKMESSAGES} from './MOCKMESSAGES';
 @Injectable()
 export class MessagesService {
-  private messages: Message[]=[];
+  messages: Message[]=[];
 
   constructor() { }
 

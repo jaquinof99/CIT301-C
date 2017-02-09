@@ -4,7 +4,7 @@ import {MOCKDOCUMENTS} from "./MOCKDOCUMENTS";
 
 @Injectable()
 export class DocumentsService {
-  private documents: Document[] =[];
+  documents: Document[] =[];
 
   constructor() { }
 
