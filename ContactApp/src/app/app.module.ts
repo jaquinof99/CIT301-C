@@ -12,6 +12,13 @@ import { ContactDetailComponent } from './contacts/contact-detail/contact-detail
 import { ContactGroupComponent } from './contacts/contact-group/contact-group.component';
 import { ContactGroupAddComponent } from './contacts/contact-group/contact-group-add.component';
 import { DropdownDirective } from './dropdown.directive';
+import {ContactsService} from "./contacts/contacts.service";
+import { MessagesComponent } from './messages/messages.component';
+import { MessageListComponent } from './messages/message-list/message-list.component';
+import { MessageItemComponent } from './messages/message-list/message-item.component';
+import { DocumentsComponent } from './documents/documents.component';
+import { DocumentListComponent } from './documents/document-list/document-list.component';
+import { DocumentItemComponent } from './documents/document-list/document-item.component';
 
 @NgModule({
   declarations: [
@@ -23,14 +30,20 @@ import { DropdownDirective } from './dropdown.directive';
     ContactDetailComponent,
     ContactGroupComponent,
     ContactGroupAddComponent,
-    DropdownDirective
+    DropdownDirective,
+    MessagesComponent,
+    MessageListComponent,
+    MessageItemComponent,
+    DocumentsComponent,
+    DocumentListComponent,
+    DocumentItemComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ContactsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
