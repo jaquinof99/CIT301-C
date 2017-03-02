@@ -25,6 +25,7 @@ import {MessagesService} from "./messages/messages.service";
 import {routing} from "./app-routing";
 import {MessageNewComponent} from "./messages/message-new/message-new.component";
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
+import {DocumentsViewComponent} from "./documents/documents-view/documents-view.component";
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { DocumentEditComponent } from './documents/document-edit/document-edit.c
     DocumentListComponent,
     DocumentItemComponent,
     MessageNewComponent,
-    DocumentEditComponent
+    DocumentEditComponent,
+    DocumentsViewComponent
   ],
   imports: [
     BrowserModule,
