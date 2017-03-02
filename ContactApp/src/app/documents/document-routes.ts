@@ -6,6 +6,6 @@ import {DocumentEditComponent} from "./document-edit/document-edit.component";
 export const DOCUMENT_ROUTES: Routes = [
 
   {path: ':idx', component: DocumentsViewComponent},
-  {path:':id/edit', component: DocumentEditComponent},
+  {path:':idx/edit', component: DocumentEditComponent},
   {path: 'new', component: DocumentEditComponent}
 ]

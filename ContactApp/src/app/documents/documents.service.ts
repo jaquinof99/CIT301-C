@@ -13,6 +13,10 @@ export class DocumentsService {
   }
 
   getDocument(idx: number){
+    return this.documents[idx];
+  }
 
+  deleteDocument(document: Document){
+    this.documents.splice(this.documents.indexOf(document));
   }
 }

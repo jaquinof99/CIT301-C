@@ -8,9 +8,11 @@ import { Document} from '../document';
 })
 export class DocumentItemComponent implements OnInit {
   @Input() document:Document; //added
+  @Input() documentIdx: number;
   constructor() { }
 
   ngOnInit() {
   }
+
 
 }
