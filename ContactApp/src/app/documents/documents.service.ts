@@ -17,6 +17,6 @@ export class DocumentsService {
   }
 
   deleteDocument(document: Document){
-    this.documents.splice(this.documents.indexOf(document));
+    this.documents.splice(this.documents.indexOf(document),1);
   }
 }
