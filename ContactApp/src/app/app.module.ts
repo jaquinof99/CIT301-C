@@ -26,6 +26,7 @@ import {routing} from "./app-routing";
 import {MessageNewComponent} from "./messages/message-new/message-new.component";
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
 import {DocumentsViewComponent} from "./documents/documents-view/documents-view.component";
+import {WindRefService} from "./wind-ref.service";
 
 @NgModule({
   declarations: [
@@ -54,7 +55,7 @@ import {DocumentsViewComponent} from "./documents/documents-view/documents-view.
     HttpModule,
     routing
   ],
-  providers: [ContactsService, DocumentsService, MessagesService],
+  providers: [ContactsService, DocumentsService, MessagesService, WindRefService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
