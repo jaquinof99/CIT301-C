@@ -1,4 +1,4 @@
-<a class="list-group-item clearfix">
+<a routerLinkActive="active" [routerLink]="['/contacts', contact.name ,'detail']" class="list-group-item clearfix">
   <div class="pull-left">
     <br>
     <h3 class="list-group-item-heading">{{contact.description}}</h3>

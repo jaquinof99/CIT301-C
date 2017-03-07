@@ -5,13 +5,18 @@ import { Contact} from './contact';
 export class ContactsService {
   private contacts: Contact[] =[];
 
-  constructor() { }
+  constructor() {
+    this.contacts = this.getContacts();
+  }
 
   getContact(idx:number){
     //this function receives and index or position of a Contact object
     // in the contacts array and returns the Contact object at the specified index
     //position in the list.
-    return this.contacts[idx]; // added
+    return this.contacts.find((contact:Contact): boolean=>{return contact.name===idx});
+
+    // return this.contacts.find(function(contact:Contact): boolean {return contact.name===idx});
+    //return this.contacts[idx]; // added
   }
 
 

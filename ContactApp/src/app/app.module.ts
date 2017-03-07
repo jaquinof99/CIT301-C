@@ -9,8 +9,6 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { ContactListComponent } from './contacts/contact-list/contact-list.component';
 import { ContactItemComponent } from './contacts/contact-list/contact-item.component';
 import { ContactDetailComponent } from './contacts/contact-detail/contact-detail.component';
-import { ContactGroupComponent } from './contacts/contact-group/contact-group.component';
-import { ContactGroupAddComponent } from './contacts/contact-group/contact-group-add.component';
 import { DropdownDirective } from './dropdown.directive';
 import {ContactsService} from "./contacts/contacts.service";
 import { MessagesComponent } from './messages/messages.component';
@@ -27,6 +25,8 @@ import {MessageNewComponent} from "./messages/message-new/message-new.component"
 import { DocumentEditComponent } from './documents/document-edit/document-edit.component';
 import {DocumentsViewComponent} from "./documents/documents-view/documents-view.component";
 import {WindRefService} from "./wind-ref.service";
+import { ContactGroupItemComponent } from './contacts/contact-group-item.component';
+import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
 
 @NgModule({
   declarations: [
@@ -36,8 +36,6 @@ import {WindRefService} from "./wind-ref.service";
     ContactListComponent,
     ContactItemComponent,
     ContactDetailComponent,
-    ContactGroupComponent,
-    ContactGroupAddComponent,
     DropdownDirective,
     MessagesComponent,
     MessageListComponent,
@@ -47,7 +45,9 @@ import {WindRefService} from "./wind-ref.service";
     DocumentItemComponent,
     MessageNewComponent,
     DocumentEditComponent,
-    DocumentsViewComponent
+    DocumentsViewComponent,
+    ContactGroupItemComponent,
+    ContactEditComponent
   ],
   imports: [
     BrowserModule,
