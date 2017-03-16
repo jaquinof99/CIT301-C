@@ -4,9 +4,11 @@ import { Contact} from './contact';
 @Injectable()
 export class ContactsService {
   private contacts: Contact[] =[];
-
+  currentContact: Contact;
   constructor() {
     this.contacts = this.getContacts();
+    this.currentContact = new Contact("18", "Jordan Aquino", "jaquinof@pucp.pe", "123-134-1245",
+      "",null);
   }
 
   getContact(idx:number){
@@ -65,6 +67,10 @@ export class ContactsService {
     this.contacts = this.contacts.sort(this.compareNames);
 
     return this.contacts;
+  }
+
+  getCurrentContact(){
+    return this.currentContact;
   }
 
   compareNames(contactA: Contact, contactB: Contact) {
