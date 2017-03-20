@@ -13,7 +13,7 @@
             size="120"
             max="120"
             required
-            [ngModel]="oldDoc?.title"
+            [ngModel]="oldDocument?.name"
             #documentTitle="ngModel"
             name="documentTitle">
           <div *ngIf="!documentTitle.valid">You must specify a valid URL for the document</div>
@@ -27,8 +27,8 @@
             class="form-control"
             size="120"
             max="255"
-            [ngModel]="oldDoc?.description"
-            name="DocumentDescription">
+            [ngModel]="oldDocument?.description"
+            name="documentDescription">
         </div>
 
         <div class="col-sm-12 form-group">
@@ -40,9 +40,9 @@
             size="150"
             max="255"
             required
-            [ngModel]="oldDoc?.url"
+            [ngModel]="oldDocument?.url"
             #documentUrl="ngModel"
-            name="DocumentURL">
+            name="documentURL">
           <div *ngIf="!documentUrl.valid">You must specify a valid URL for the document</div>
         </div>
       </div>
