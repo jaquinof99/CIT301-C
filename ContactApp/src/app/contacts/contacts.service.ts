@@ -82,4 +82,31 @@ export class ContactsService {
     return 0;
 
   }
+
+  addContact(contact: Contact){
+    if(!contact)
+      return;
+    this.contacts.push(contact);
+    this.contacts = this.contacts.sort(this.compareNames);
+  }
+
+  updateContact(oldContact: Contact, newContact: Contact){
+    if(!oldContact || !newContact){
+      return;
+    }
+    this.contacts[this.contacts.indexOf(oldContact)] = newContact;
+    this.contacts = this.contacts.sort(this.compareNames);
+  }
+
+  deleteContact(contact: Contact){
+    if(!contact){
+      return;
+    }
+    const pos = this.contacts.indexOf(contact);
+    if (pos<0){ //contact not found in list?
+      return;
+    }
+    this.contacts.slice(pos,1);
+    this.contacts = this.contacts.sort(this.compareNames);
+  }
 }
