@@ -4,7 +4,7 @@ import {Injectable} from "@angular/core";
  */
 @Injectable()
 export class Contact {
-  constructor(public name, public description, public email, public phone, public imagePath, public group: Contact[]){
+  constructor(public name: string, public description: string, public email: string, public phone: string, public imagePath: string, public group: Contact[]){
 
   }
 }

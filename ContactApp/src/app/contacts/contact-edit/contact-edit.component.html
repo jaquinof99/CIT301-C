@@ -12,8 +12,8 @@
             size="120"
             max="120"
             required
+            [ngModel]="contact?.description"
             #name="ngModel"
-            [ngModel]="contact?.name"
             name="name">
           <div *ngIf="!name.valid">Name is required</div>
         </div>
@@ -26,8 +26,8 @@
             class="form-control"
             size="120"
             max="255"
-            #email="ngModel"
             pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+            #email="ngModel"
             [ngModel]="contact?.email"
             name="email">
           <div *ngIf="!email.valid">Email is not valid</div>
@@ -65,10 +65,11 @@
         </div>
 
         <div class="row" id="groupList"
-             style="min-height: 3rem;">
+             style="min-height: 3rem;"
+              dnd-droppable [dropZones]="['demo1']" (onDropSuccess)="addToGroup($event)">
           <div *ngFor="let contact of groupContacts; let i = index">
             <div>
-              <ca-contact-group-item class="col-sm-11" [selectedcontact]="selectedContact"></ca-contact-group-item>
+              <ca-contact-group-item class="col-sm-11" [selectedcontact]="contact"></ca-contact-group-item>
               <button class="btn btn-danger col-sm-2 deleteButton" (click)="onRemoveItem(i)">X</button>
             </div>
           </div>

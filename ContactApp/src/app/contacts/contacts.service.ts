@@ -11,7 +11,7 @@ export class ContactsService {
       "",null);
   }
 
-  getContact(idx:number){
+  getContact(idx:string){
     //this function receives and index or position of a Contact object
     // in the contacts array and returns the Contact object at the specified index
     //position in the list.
@@ -88,6 +88,7 @@ export class ContactsService {
       return;
     this.contacts.push(contact);
     this.contacts = this.contacts.sort(this.compareNames);
+
   }
 
   updateContact(oldContact: Contact, newContact: Contact){
