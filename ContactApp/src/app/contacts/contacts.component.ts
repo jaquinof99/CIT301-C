@@ -6,7 +6,7 @@ import { Contact } from './contact'
   templateUrl: './contacts.component.html'
 })
 export class ContactsComponent implements OnInit {
-  //selectedContact: Contact;
+  selectedContact: Contact = null;
   constructor() { }
 
   ngOnInit() {

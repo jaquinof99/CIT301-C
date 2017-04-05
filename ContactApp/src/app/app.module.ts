@@ -28,6 +28,7 @@ import {WindRefService} from "./wind-ref.service";
 import { ContactGroupItemComponent } from './contacts/contact-group-item.component';
 import { ContactEditComponent } from './contacts/contact-edit/contact-edit.component';
 import {DndModule} from 'ng2-dnd';
+import { ContactsFilterPipe } from './contacts/contacts-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import {DndModule} from 'ng2-dnd';
     DocumentsViewComponent,
     ContactGroupItemComponent,
     ContactEditComponent,
-    MessageNewComponent
+    MessageNewComponent,
+    ContactsFilterPipe
   ],
   imports: [
     BrowserModule,

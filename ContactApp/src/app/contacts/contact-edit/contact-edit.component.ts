@@ -28,6 +28,7 @@ export class ContactEditComponent implements OnInit, OnDestroy {
     this.editMode=false;
     this.hasGroup=false;
     this.invalidGroupContact=false;
+
     this.subscription = this.route.params.subscribe(
       (params: any) => {
         if(params.hasOwnProperty('id')) {

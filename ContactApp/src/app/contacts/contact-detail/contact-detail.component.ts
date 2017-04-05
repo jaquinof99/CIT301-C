@@ -11,9 +11,9 @@ import {ContactsService} from "../contacts.service";
 })
 export class ContactDetailComponent implements OnInit, OnDestroy {
   //@Input() selectedContact: Contact;
-  private subscription: Subscription;
-  private contactIndex: string;
-  private selectedContact: Contact;
+  subscription: Subscription;
+  contactIndex: string;
+  selectedContact: Contact;
   contactGroup: Contact[]=[];
 
   constructor(
@@ -27,6 +27,7 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
       (params: any)=>{
         this.contactIndex = params['id'];
         this.selectedContact = this.contactsService.getContact(this.contactIndex);
+        console.log(this.selectedContact);
         this.contactGroup = this.selectedContact.group;
 
       }
@@ -36,7 +37,7 @@ export class ContactDetailComponent implements OnInit, OnDestroy {
   //   this.router.navigate(['/contacts',this.contactIndex,'edit'])
   // }
 
-   onDelete(){
+  onDelete(){
      this.contactsService.deleteContact(this.selectedContact);
      this.router.navigate(['/contacts']);
   }
